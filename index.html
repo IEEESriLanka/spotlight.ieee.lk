@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top Stories — IEEE Sri Lanka Section</title>
+  <meta name="color-scheme" content="dark light" />
+  <style>
+    :root {
+      --bg-start: #0b1220; /* deep navy */
+      --bg-mid:   #0a1a2b; /* blue-black */
+      --bg-end:   #00060c; /* near-black */
+      --text:     #ffffff;
+      --text-dim: #c9d6ff;
+    }
+
+    /* Reset + sensible defaults */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+
+    body {
+      /* Subtle blue-black gradient; page is very lightweight (no external assets) */
+      background: radial-gradient(1200px 800px at 20% 10%, rgba(255,255,255,0.06), transparent 60%),
+                  linear-gradient(135deg, var(--bg-start), var(--bg-mid) 55%, var(--bg-end));
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+                   Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      display: grid;
+      place-items: center;
+      min-height: 100svh; /* handles mobile browser UI correctly */
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 2rem;
+    }
+
+    main {
+      text-align: center;
+      max-width: 60ch;
+    }
+
+    h1 {
+      margin: 0;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: 0.01em;
+      font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+      text-wrap: balance;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    }
+
+    p {
+      margin-top: 0.75rem;
+      font-size: clamp(0.95rem, 1.2vw + 0.6rem, 1.1rem);
+      color: var(--text-dim);
+    }
+
+    /* Respect reduced motion preferences */
+    @media (prefers-reduced-motion: no-preference) {
+      body { transition: background-position 600ms ease; }
+      body:hover { background-position: 10% 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Top stories of the IEEE Sri Lanka Section and its subunits</h1>
+  </main>
+</body>
+</html>
